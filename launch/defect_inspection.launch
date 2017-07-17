@@ -1,3 +1,16 @@
 <launch>
 
+	<include file="$(find gazebo_ros)/launch/empty_world.launch">
+		<arg name="world_name" value="$(find defect_inspection)/launch/initialize.world"/>
+		<arg name="gui" value="true" />
+		<arg name="paused" value="true"/>
+		<arg name="use_sim_time" value="true"/>
+	</include>
+
+	<node name="spawn_robot_arm" pkg="gazebo_ros" type="spawn_model" args="-file $(find defect_inspection)/urdf/robot_arm.urdf -urdf -model robot_arm -y -1.5" />
+
+	<node name="spawn_conveyor_belt" pkg="gazebo_ros" type="spawn_model" args="-file $(find defect_inspection)/urdf/conveyor_belt.urdf -urdf -model conveyor_belt" />
+
+	<node name="spawn_frig" pkg="gazebo_ros" type="spawn_model" args="-file $(find defect_inspection)/urdf/frig.urdf -urdf -model frig" />
+
 </launch>
