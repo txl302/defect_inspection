@@ -1,34 +1,23 @@
 <?xml version="1.0"?>
 <robot name="conveyor_belt">
 
-<!-- conveyor belt is just a long flat box for objects to slide on it -->
-
-<!-- world link -->
-<link name="world"/>
-
-<!-- base_link and its fixed joint -->
-<joint name="joint_fix" type="fixed">
-  <parent link="world"/>
-  <child link="base_link"/>
-</joint>
-
 <link name="base_link">
   <collision>
-    <origin xyz="0 0 1.5" rpy="0 0 0"/>
+    <origin xyz="0 0 0.5" rpy="0 0 0"/>
     <geometry>
-      <box size="1 1 1"/>
+      <box size="0.472 0.450 0.492"/>
     </geometry>
   </collision>
 
   <visual>
-    <origin xyz="0 0 1.5" rpy="0 0 0"/>
+    <origin xyz="0 0 0.5" rpy="0 0 0"/>
     <geometry>
-      <box size="1 1 1"/>
+      <box size="0.472 0.450 0.492"/>
     </geometry>
   </visual>
 
   <inertial>
-    <origin xyz="0 0 0.1" rpy="0 0 0"/>
+    <origin xyz="0 0 0.5" rpy="0 0 0"/>
     <mass value="1"/>
     <inertia
       ixx="1.0" ixy="0.0" ixz="0.0"

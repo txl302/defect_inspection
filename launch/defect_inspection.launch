@@ -11,6 +11,6 @@
 
 	<node name="spawn_conveyor_belt" pkg="gazebo_ros" type="spawn_model" args="-file $(find defect_inspection)/urdf/conveyor_belt.urdf -urdf -model conveyor_belt" />
 
-	<node name="spawn_frig" pkg="gazebo_ros" type="spawn_model" args="-file $(find defect_inspection)/urdf/frig.urdf -urdf -model frig" />
+	<node name="spawn_frig" pkg="gazebo_ros" type="spawn_model" args="-file $(find defect_inspection)/urdf/frig_S.urdf -urdf -model frig" />
 
 </launch>
