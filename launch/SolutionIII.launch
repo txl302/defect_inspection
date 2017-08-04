@@ -7,7 +7,7 @@
 		<arg name="use_sim_time" value="true"/>
 	</include>
 
-	<node name="spawn_robot_arm" pkg="gazebo_ros" type="spawn_model" args="-file $(find defect_inspection)/urdf/robot_arm_I.urdf -urdf -model robot_arm -y -1.5" />
+	<node name="spawn_robot_arm_III" pkg="gazebo_ros" type="spawn_model" args="-file $(find defect_inspection)/urdf/robot_arm_III.urdf -urdf -model robot_arm -y -1.5" />
 
 	<node name="spawn_conveyor_belt" pkg="gazebo_ros" type="spawn_model" args="-file $(find defect_inspection)/urdf/conveyor_belt.urdf -urdf -model conveyor_belt" />
 

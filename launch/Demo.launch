@@ -1,0 +1,31 @@
+<launch>
+
+	<include file="$(find gazebo_ros)/launch/empty_world.launch">
+		<arg name="world_name" value="$(find defect_inspection)/launch/initialize.world"/>
+		<arg name="gui" value="true" />
+		<arg name="paused" value="true"/>
+		<arg name="use_sim_time" value="true"/>
+	</include>
+
+	<!-- The robotic arm for the Solution I -->
+	<node name="spawn_robot_arm_I" pkg="gazebo_ros" type="spawn_model" args="-file $(find defect_inspection)/urdf/robot_arm_I.urdf -urdf -model robot_arm_I -y -6.5" />
+
+	<node name="spawn_conveyor_belt_I" pkg="gazebo_ros" type="spawn_model" args="-file $(find defect_inspection)/urdf/conveyor_belt.urdf -urdf -model conveyor_belt_I -y -5" />
+
+	<node name="spawn_frig_I" pkg="gazebo_ros" type="spawn_model" args="-file $(find defect_inspection)/urdf/frig_S.urdf -urdf -model frigI -y -5" />
+
+	<!-- The robotic arm for the Solution I -->
+	<node name="spawn_robot_arm_II" pkg="gazebo_ros" type="spawn_model" args="-file $(find defect_inspection)/urdf/robot_arm_II.urdf -urdf -model robot_arm_II -y -1.5" />
+
+	<node name="spawn_conveyor_belt_II" pkg="gazebo_ros" type="spawn_model" args="-file $(find defect_inspection)/urdf/conveyor_belt.urdf -urdf -model conveyor_belt_II" />
+
+	<node name="spawn_frig_II" pkg="gazebo_ros" type="spawn_model" args="-file $(find defect_inspection)/urdf/frig_S.urdf -urdf -model frigII" />
+
+	<!-- The robotic arm for the Solution I -->
+	<node name="spawn_robot_arm_III" pkg="gazebo_ros" type="spawn_model" args="-file $(find defect_inspection)/urdf/robot_arm_III.urdf -urdf -model robot_arm -y +3.5" />
+
+	<node name="spawn_conveyor_belt_III" pkg="gazebo_ros" type="spawn_model" args="-file $(find defect_inspection)/urdf/conveyor_belt.urdf -urdf -model conveyor_belt -y +5" />
+
+	<node name="spawn_frig_III" pkg="gazebo_ros" type="spawn_model" args="-file $(find defect_inspection)/urdf/frig_S.urdf -urdf -model frigIII -y +5" />
+
+</launch>
